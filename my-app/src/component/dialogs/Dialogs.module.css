@@ -1,0 +1,33 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    column-gap: 10px;
+}
+
+.dialogs__items{
+    
+}
+
+.dialog{
+    display: block;
+    padding: 5px 10px;
+    background-color:lavender;
+    margin: 2px 0;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s all;
+}
+.dialog:hover{
+    background-color: #fff;
+}
+.dialog.active{
+    background-color: #fff;
+}
+
+.messeges{
+
+}
+
+.messeges__item{
+
+}
