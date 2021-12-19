@@ -5,21 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './redux/redux-store';
 
-let renderTree = (state) =>{
-  ReactDOM.render(
-    <React.StrictMode>
-      <App 
-        state={store.getState()} 
-        dispatch={store.dispatch.bind(store)} 
-        store={store}
-      />
-    </React.StrictMode>,
-    document.getElementById('root')
-  );
-}
+import {Provider} from 'react-redux';
 
-renderTree(store.getState())
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+
+
 store.subscribe(()=>{
   let state = store.getState()
-  renderTree(state)
 })
