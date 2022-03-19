@@ -15,11 +15,19 @@ export const usersApi = {
         return instans.get(`users?page=${currentPage}&count=${pageSize}`).then(response => response.data)
     },
     unfollow(userId){
-        return instans.delete(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
+        return instans.delete(`follow/${userId}`)
     },
     follow(userId){
-        return instans.post(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
+        return instans.post(`follow/${userId}`)
     },
+    getProfile(userId){
+        return instans.get(`profile/${userId}`)
+    }
 }
 
+export const authApi = {
+    me(){
+        return instans.get(`auth/me`)
+    }
+}
 

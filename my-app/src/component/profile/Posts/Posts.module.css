@@ -1,0 +1,20 @@
+.content{
+    grid-area: c;
+    background-color: honeydew;
+}
+.item{
+    color: red;
+}
+
+.btn{
+    padding: 10px 15px;
+}
+.textarea{
+    padding: 15px;
+    border: 1px solid #000;
+}
+.posttop{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 15px;
+}
